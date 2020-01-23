@@ -1,0 +1,13 @@
+<h1>AÑADIR AMIGO</h1>
+<form [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" formControlName="username" id="username" placeholder="Friend">
+  <span class="error" *ngIf="!addFriendForm.controls['username'].valid && addFriendForm.controls['username']">
+    El nombre del amigo no es válido
+  </span>
+  <button type="submit">
+    Añadir
+  </button>
+</form>
+
+<a routerLink="/" routerLinkActive="active">Volver a listado de amigos</a>

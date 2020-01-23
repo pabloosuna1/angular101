@@ -1,0 +1,6 @@
+<h1>LISTADO DE AMIGOS</h1>
+<div *ngFor="let friend of friends">
+  <app-hello [nombre]="friend"></app-hello>
+</div>
+
+<a routerLink="/add" routerLinkActive="active">Añadir nuevo amigo</a>
